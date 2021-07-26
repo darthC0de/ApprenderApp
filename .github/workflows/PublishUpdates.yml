@@ -34,13 +34,23 @@ jobs:
           expo-cache: true
           token: ${{ secrets.EXPO_TOKEN }}
       - run: npm install
-      - run: expo build:android -t apk
+      - run: expo build:android -t apk > ./build_status.txt
+      - name: Upload result for building job
+        uses: actions/upload-artifact@v2
+        with:
+          name: build_status
+          path: ./build_status.txt
   ShowBuildResult:
     name: Show results
     runs-on: ubuntu-latest
     needs: GenerateNewBuild
     steps:
-      - name: Print the final result
+      - name: Download result for building job
+        uses: actions/download-artifact@v2
+        with:
+          name: build_status
+      - name: Print result for building job
         shell: bash
         run: |
-          echo ${{ steps.GenerateNewBuild.output }}
+          value=`cat ./build_status.txt`
+          echo $value | grep "expo.io/artifacts"
