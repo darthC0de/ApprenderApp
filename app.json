@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "apprender",
+    "slug": "Apprender",
+    "version": "1.2.0",
+    "owner":"rodcordeiro",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#A9F448"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#A9F448"
+      },
+      "package": "com.rodcordeiro.Apprender"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "description": "Aplicativo criado para auxíliar crianças no aprendizado, colocando em prática com contas e perguntas",
+    "githubUrl": "https://github.com/rodcordeiro/apprenderMobile"
+  }
+}
