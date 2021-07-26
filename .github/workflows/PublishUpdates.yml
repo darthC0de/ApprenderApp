@@ -37,7 +37,6 @@ jobs:
       - run: expo build:android -t apk
   ShowBuildResult:
     name: Show results
-    id: ShowResults
     runs-on: ubuntu-latest
     needs: GenerateNewBuild
     steps:
