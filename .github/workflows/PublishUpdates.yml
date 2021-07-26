@@ -24,7 +24,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: Publish_Updates
     steps:
-      - id: BuildArtifact
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
@@ -45,4 +44,4 @@ jobs:
       - name: Print the final result
         shell: bash
         run: |
-          echo ${{ steps.BuildArtifact.output }}
+          echo ${{ steps.GenerateNewBuild.output }}
