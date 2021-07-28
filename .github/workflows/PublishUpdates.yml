@@ -6,6 +6,7 @@ on:
 jobs:
   Publish_Updates:
     name: Install and publish
+    if: "contains(github.event.head_commit.message, '[Release]')" # If commit message contains "[Released]" only then this job would be run.
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
