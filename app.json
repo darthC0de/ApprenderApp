@@ -4,10 +4,10 @@
     "slug": "apprender",
     "description": "Aplicativo criado para auxíliar crianças no aprendizado, colocando em prática com contas e perguntas",
     "githubUrl": "https://github.com/rodcordeiro/apprenderMobile",
-    "version": "1.2.0",
+    "version": "0.0.1",
     "primaryColor":"#A9F448",
     "privacy": "public",    
-    "owner":"rodcordeiro",
+    "owner": "darthcode",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
