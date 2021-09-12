@@ -25,14 +25,14 @@
                                                "security"
                                            ],
                                 "assignees":  [
-                                                  "@rodcordeiro"
+                                                  ">rodcordeiro"
                                               ]
                             },
     "extends":  [
                     "config:base",
                     ":dependencyDashboard",
-                    "github@whitesource/merge-confidence:beta",
-                    "github@rodcordeiro/.github:renovate"
+                    "github>whitesource/merge-confidence:beta",
+                    "github>rodcordeiro/.github:renovate"
                 ],
     "schedule":  [
                      "before 3am on the first day of the month"
