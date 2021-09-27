@@ -40,8 +40,8 @@
         ":dependencyDashboard",
         "github>whitesource/merge-confidence:beta"
     ],
-    "schedule": [
-        "before 3am on the first day of the month"
-    ],
-    "timezone": "America/Sao_Paulo"
+    "schedule":  [
+                     "before 3am on the first day of the month"
+                 ],
+    "timezone":  "America/Sao_Paulo"
 }

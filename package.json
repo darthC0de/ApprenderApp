@@ -8,10 +8,10 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "@expo-google-fonts/schoolbell": "^0.1.0",
+    "@expo-google-fonts/schoolbell": "^0.2.0",
     "@react-native-community/masked-view": "0.1.11",
-    "@react-navigation/native": "^5.9.3",
-    "@react-navigation/stack": "^5.14.3",
+    "@react-navigation/native": "^6.0.0",
+    "@react-navigation/stack": "^6.0.0",
     "axios": "^0.21.1",
     "expo": "^42.0.0",
     "expo-app-loading": "^1.0.3",
@@ -23,12 +23,12 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
     "react-native-gesture-handler": "~1.10.2",
     "react-native-reanimated": "~2.2.0",
-    "react-native-safe-area-context": "3.2.0",
-    "react-native-screens": "~3.4.0",
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-screens": "~3.7.0",
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {
-    "@babel/core": "7.9.6"
+    "@babel/core": "7.15.5"
   },
   "private": false
 }

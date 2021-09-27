@@ -2,31 +2,56 @@ name: Expo actions
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
+  ValidateActor:
+      runs-on: ubuntu-latest
+      outputs:
+        ACTOR: ${{ steps.actor.outputs.ACTOR }}
+      steps:
+        - id: actor
+          run: |
+            if [[ ${{ github.actor }} != *"[bot]" ]];then
+                echo "::set-output name=ACTOR::true" 
+            else
+                echo "::set-output name=ACTOR::false" 
+            fi
+  ValidateRepo:
+      name: Validate repository
+      runs-on: ubuntu-latest
+      outputs:
+        REPO: ${{ steps.repo.outputs.REPO }}
+      steps:
+        - id: repo
+          run: |
+            if [[ ${{ github.repository_owner }} == "darthC0de" ]];then
+                echo "::set-output name=REPO::true"
+            else
+                echo "::set-output name=REPO::false"
+            fi
   Publish_Updates:
-    name: Install and publish
-    if: "${{github.repository_owner == 'darthC0de'}}"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
-      - uses: expo/expo-github-action@v6
-        with:
-          expo-version: 4.x
-          expo-cache: true
-          token: ${{ secrets.EXPO_TOKEN }}
-      - run: npm install
-      - run: expo publish
+      name: Install and publish
+      if: ${{needs.ValidateActor.outputs.ACTOR}} == true && ${{needs.ValidateRepo.outputs.REPO}} == true
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@v2
+          with:
+            node-version: 14.x
+        - uses: expo/expo-github-action@v6
+          with:
+            expo-version: 4.x
+            expo-cache: true
+            token: ${{ secrets.EXPO_TOKEN }}
+        - run: npm install
+        - run: expo publish
   GenerateNewBuild:
     name: Build new artifact
     runs-on: ubuntu-latest
     needs: Publish_Updates
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: 14.x
       - uses: expo/expo-github-action@v6
