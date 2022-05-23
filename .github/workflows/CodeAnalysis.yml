@@ -15,7 +15,7 @@ on:
     - cron: '0 3 * * 1'
 
 jobs:
-  analyze:
+  CodeQuality:
     name: Analyze
     runs-on: ubuntu-latest
     permissions:
@@ -42,3 +42,12 @@ jobs:
     
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
+  Audit:
+    steps:
+      - name: Run NPM audit and create PR with result
+        uses: luisfontes19/npm-audit-action@v0.1.0
+        with:
+          fix: true # To create pull requests with npm audit fix
+          package-lock-only: false
+          force: true
+          github-token: ${{ secrets.GITHUB_TOKEN }} # github token to create the pull request. Here you need to have a secret named TOKEN.
