@@ -77,7 +77,7 @@ jobs:
           with:
             token: ${{ secrets.TOKEN }}
         - name: Download result for building job
-          uses: actions/download-artifact@v2
+          uses: actions/download-artifact@v3
           with:
             name: build_status
         - name: Get app name
