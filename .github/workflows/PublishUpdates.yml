@@ -62,8 +62,8 @@ jobs:
       - run: npm install
       - run: expo build:android -t apk > ./build_status.txt
       - name: Upload result for building job
-          uses: actions/upload-artifact@v2
-          with:
+        uses: actions/upload-artifact@v2
+        with:
             name: build_status
             path: ./build_status.txt
   DownloadFile:
