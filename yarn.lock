@@ -2026,9 +2026,9 @@
     "@types/hammerjs" "^2.0.36"
 
 "@expo-google-fonts/schoolbell@^0.2.0":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@expo-google-fonts/schoolbell/-/schoolbell-0.2.2.tgz#8faaeb6ecd744c2147baa8eb1ae48cb20d2663f5"
-  integrity sha512-enUbG60INGa1chOyxGbJ/ETaGMNDkCQULiiBNn9gpdaQRnjut1jed/yF5COYykJVeVf6eAkrPJRV+VRe+Yjd/Q==
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/schoolbell/-/schoolbell-0.2.3.tgz#2086fd399d851bb4e924ced4a5691d6d98e516ad"
+  integrity sha512-58u38t80p/7h5s2Kv4pecDmv1UzzZ4gghu7jxI+HinP4lYKzaOZ/r79Z2l/Flmo6/4ef5YA/IkqpGzdsE8bN3w==
 
 "@expo/bunyan@4.0.0", "@expo/bunyan@^4.0.0":
   version "4.0.0"
