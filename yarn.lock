@@ -2118,10 +2118,10 @@
   dependencies:
     "@types/hammerjs" "^2.0.36"
 
-"@expo-google-fonts/schoolbell@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@expo-google-fonts/schoolbell/-/schoolbell-0.3.0.tgz#c786a3d21cb732c70c661b56bf4581efaf417fe1"
-  integrity sha512-a0cZZvc5EXMn3lhXxFzv8r6iRl1L2gQMZQrg50aLIAGFi6L0ukSi7SKE43uxvrzF4UXr6wTwmxp9u5tze8B/dw==
+"@expo-google-fonts/schoolbell@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/schoolbell/-/schoolbell-0.4.0.tgz#17509c0d9aa55d5776a1c20d2d2da55dd7896313"
+  integrity sha512-lBH3LQZRgZ1kMhgBiV84Fe9y5jhwCN37D0B7c86jc3R2DEGzFaKpmx2om9tPe12rrzkPMuBkAb3GoA5AhA4rQg==
 
 "@expo/bunyan@4.0.0", "@expo/bunyan@^4.0.0":
   version "4.0.0"
